@@ -1,7 +1,7 @@
 # Reinforcement Learning
 
 # Goals
-  - Implement Reinforcement Learning algorithms with results on par with the current state-of-the-art implements.
+  - Implement Reinforcement Learning algorithms with results on par with the current state-of-the-art implementations.
   - Make the model generic so it can be applied to different environments with minimal changes.
     
 # Resources
