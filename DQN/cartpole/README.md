@@ -15,7 +15,7 @@
 
 Initial | After 450 episodes
 
-![start](https://www.github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/start_cartpole.mp4)  | ![end](https://www.github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/end_cartpole.mp4)
+![start](https://www.github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/start_cartpole.gif)  | ![end](https://www.github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/end_cartpole.gif)
 
 
 ![Plot](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/cartpole.png)
