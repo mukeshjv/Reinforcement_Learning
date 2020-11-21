@@ -15,10 +15,10 @@
 
 Initial | After 450 episodes
 
-![start](https://www.github.com/mukeshjv/Reinforcement_Learning/DQN/cartpole/blob/start_cartpole.mp4)  | ![end](https://www.github.com/mukeshjv/Reinforcement_Learning/DQN/cartpole/blob/end_cartpole.mp4)
+![start](https://www.github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/start_cartpole.mp4)  | ![end](https://www.github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/end_cartpole.mp4)
 
 
-![Plot](https://www.github.com/mukeshjv/Reinforcement_Learning/DQN/cartpole/blob/cartpole.png)
+![Plot](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/cartpole.png)
 
 *Yet to solve
 
