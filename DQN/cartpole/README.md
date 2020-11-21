@@ -13,12 +13,17 @@
 
 ## Results
 
-Initial                         |                    After 450 episodes
+Initial     |   After 450 episodes
+:-------------------------:|:-------------------------:
+![](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/start.gif)  | ![](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/end.gif)
 
-![](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/start.gif)   ![](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/end.gif)
 
+## Plot
 
-![Plot](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/cartpole.png)
+- The blue line represents duration of current episode and the orange line represents average of the last 100 episodes.
+
+![](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/cartpole.png)
+
 
 *Yet to solve
-
+(CartPole-v0 defines "solving" as getting average reward of 195.0 over 100 consecutive trials).
