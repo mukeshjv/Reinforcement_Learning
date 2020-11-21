@@ -13,30 +13,35 @@ import torch.optim as optim
 import torch.nn.functional as F
 import torchvision.transforms as T
 
+#Container to store timestep info
 Experience = namedtuple(
     'Experience',
     ('state', 'action', 'next_state', 'reward')
 )
 
+#Hyper-params
 batch_size = 512
 gamma = 0.999
 target_update = 10
 memory_size = 900000
 lr = 0.001
-num_episodes = 101
+num_episodes = 500
 epsilon = 0.10
 
+#Deep Q Network
 class DQN(nn.Module):
     def __init__(self, img_height, img_width):
         super().__init__()
 
-        self.fc1 = nn.Linear(in_features=img_height*img_width*3, out_features=24)   
-        self.fc2 = nn.Linear(in_features=24, out_features=32)
+        self.fc1 = nn.Linear(in_features=img_height*img_width*3, out_features=128)   
+        self.fc2 = nn.Linear(in_features=128, out_features=64)
+        self.fc3 = nn.Linear(in_features=64, out_features=32)
         self.out = nn.Linear(in_features=32, out_features=2)
     def forward(self, t):
         t = t.flatten(start_dim=1)
         t = F.relu(self.fc1(t))
         t = F.relu(self.fc2(t))
+        t = F.relu(self.fc3(t))
         t = self.out(t)
         return t
 
@@ -62,19 +67,20 @@ class ReplayMemory():
         self.memory = []
         self.mem_count = 0
 
-    def push(self, experience):
+    def push(self, experience):     #Add experience to replay buffer
         if len(self.memory) < self.capacity:
             self.memory.append(experience)
         else:
             self.memory[self.mem_count % self.capacity] = experience
         self.mem_count += 1
 
-    def sample(self, batch_size):
+    def sample(self, batch_size):   #Sample a batch from the replay buffer
         return random.sample(self.memory, batch_size)
 
     def can_provide_sample(self, batch_size):
         return len(self.memory) >= batch_size
 
+#Environement
 class Env():
     def __init__(self, device):
         self.device = device
@@ -172,7 +178,7 @@ def extract_tensors(experiences):
 
     return (t1, t2, t3, t4)
 
-def get_moving_average(period, values):
+def get_moving_average(period, values):     #Calculate average of last 100 episodes
     values = torch.tensor(values, dtype=torch.float)
     if len(values) >= period:
         moving_avg = values.unfold(dimension=0, size=period, step=1).mean(dim=1).flatten(start_dim=0)
@@ -192,6 +198,7 @@ def plot(values, moving_avg_period):
 
     moving_avg = get_moving_average(moving_avg_period, values)
     plt.plot(moving_avg)
+    plt.savefig("cartpole.png")
     plt.pause(0.001)
     
 
@@ -235,4 +242,4 @@ for episode in range(num_episodes):
     if episode % target_update == 0:
         target_net.load_state_dict(policy_net.state_dict())
 
-# env.close()
+env.close()
