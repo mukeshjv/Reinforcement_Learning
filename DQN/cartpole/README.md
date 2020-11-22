@@ -13,16 +13,16 @@
 
 ## Results
 
-Initial     |   After 450 episodes
+Initial     |   After 1000 episodes
 :-------------------------:|:-------------------------:
-![](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/start.gif)  | ![](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/end.gif)
+![](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/start.gif)  | ![](blob/cartpole-end.gif)
 
 
 ## Plot
 
 - The blue line represents duration of current episode and the orange line represents average of the last 100 episodes.
 
-![](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/cartpole.png)
+![](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/plot.png)
 
 
 *Yet to solve
