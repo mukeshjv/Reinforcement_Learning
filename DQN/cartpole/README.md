@@ -15,7 +15,7 @@
 
 Initial     |   After 1000 episodes
 :-------------------------:|:-------------------------:
-![](https://github.com/mukeshjv/Reinforcement_Learning/blob/main/DQN/cartpole/blob/start.gif)  | ![](blob/cartpole-end.gif)
+![](blob/cartpole-start.gif)  | ![](blob/cartpole-end.gif)
 
 
 ## Plot
